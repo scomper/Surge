@@ -15,4 +15,4 @@ douyin_follow.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aw
 douyin_naerby.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/douyin_nearby.js
 
 [MITM]
-hostname = %APPEND% *.amemv.com, aweme.snssdk.com
+hostname = %INSERT% *.amemv.com, aweme.snssdk.com
