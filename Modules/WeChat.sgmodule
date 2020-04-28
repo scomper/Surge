@@ -5,4 +5,4 @@
 http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/WeChat.js
 
 [MITM]
-hostname = mp.weixin.qq.com
+hostname = %APPEND% mp.weixin.qq.com
