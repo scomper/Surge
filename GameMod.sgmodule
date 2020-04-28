@@ -1,6 +1,0 @@
-#!name=Game Console SNAT
-#!desc=让 Surge 为 PlayStation、Xbox 和 Nintendo Switch 正确处理 SNAT 对话。只有当 Surge Mac 作为这些设备的路由器时才会有用。
-#!system=mac
-
-[General]
-always-real-ip = %APPEND% *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
