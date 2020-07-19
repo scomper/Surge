@@ -1,0 +1,8 @@
+#!name=WeChat
+#!desc=微信去广告
+
+[Script]
+http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/WeChat.js
+
+[MITM]
+hostname = %INSERT% mp.weixin.qq.com

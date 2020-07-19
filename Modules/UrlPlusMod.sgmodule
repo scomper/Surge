@@ -1,15 +1,7 @@
 #!name=URL Rewrite Plus
-#!desc= 需配合 Rewrite 和 MitM 使用。重定向 taobao、163、JD、mi 的 HTTP 访问到 HTTPS；避免访问一些软件的国内仿冒官网；解除 TikTok 地区限制。
+#!desc= 需配合 Rewrite 和 MitM 使用。避免访问一些软件的国内仿冒官网；解除 TikTok 地区限制。
 
 [URL Rewrite]
-# Redirect HTTP to HTTPS
-^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
-^https?:\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
-^https?:\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
-^https?:\/\/you\.163\.com\/ https://you.163.com/ 302
-^https?:\/\/(www.)?suning\.com/ https://suning.com/ 302
-^https?:\/\/(www.)?yhd\.com https://yhd.com/ 302
-
 # Redirect False to True
 # > IGN China to IGN Global
 ^https?:\/\/(www.)?ign\.xn--fiqs8s\/ http://cn.ign.com/ccpref/us 302

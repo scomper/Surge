@@ -1,0 +1,16 @@
+#!name=知乎
+#!desc=知乎App去广告
+#!system=ios
+
+[Rule]
+DOMAIN,sugar.zhihu.com,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/,REJECT
+URL-REGEX,https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)(\/|\?)),REJECT
+AND,((USER-AGENT,osee2*), (OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve)))),REJECT
+
+[MITM]
+hostname = %INSERT% ap*.zhihu.com, www.zhihu.com, pic*.zhimg.com, lens.zhihu.com
+
+[Script]
+Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/Zhihu.js,script-update-interval=0
