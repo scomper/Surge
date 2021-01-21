@@ -1,6 +1,7 @@
 /*
 README：https://github.com/yichahucha/surge/tree/master
  */
+
 const path1 = "/interface/sdk/sdkad.php";
 const path2 = "/wbapplua/wbpullad.lua";
 
